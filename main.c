@@ -1,3 +1,8 @@
+#define ms 2
+#define DE 1600 //100*16 0.9degree per plus
+#define ST P2_0 //step pin
+#define DI P2_2   //dir pin
+#define EN P2_4   //dir pin
 uint8_t PS_ReceiveBuffer[20];
 uint8_t PS_EmptyBuffer[12] = {0xEF,0x01,0xFF,0xFF,0xFF,0xFF,0x01,0x00,0x03,0x0D,0x00,0x11};
 uint8_t PS_GetImageBuffer[12] = {0xEF,0x01,0xFF,0xFF,0xFF,0xFF,0x01,0x00,0x03,0x01,0x00,0x05};
@@ -93,7 +98,9 @@ void PS_Identify()
         if(PS_ReceiveBuffer[9] == 0x00)
         {
           PS_ControlLED(PS_GreenLEDBuffer);
+          digitalWrite(EN,LOW);
           motor();
+          digitalWrite(EN,HIGH);
           return;
         }
       }
@@ -107,8 +114,13 @@ void PS_Identify()
 void setup()
 {  Serial.begin(9600); 
   Serial1.begin(57600); //fmc383 use this
-    pinMode(PUSH2,INPUT_PULLUP);
+   pinMode(PUSH2,INPUT_PULLUP);
   pinMode(RED_LED,OUTPUT);
+  pinMode(DI,OUTPUT);
+  pinMode(ST,OUTPUT);
+  pinMode(EN,OUTPUT);
+  digitalWrite(DI,HIGH);
+  digitalWrite(EN,HIGH);
 }
 
 void loop()
@@ -128,9 +140,11 @@ void loop()
 }
 void motor()//fake step motor fuction
 {
-  for(int i=0;i<100;i++){
+  for(int i=0;i<DE;i++){
   digitalWrite(RED_LED,HIGH);
-  delay(100);
+  digitalWrite(ST,HIGH);
+  delay(ms);
   digitalWrite(RED_LED,LOW);
-  delay(100);
+   digitalWrite(ST,LOW);
+  delay(ms);
   }}
