@@ -36,6 +36,7 @@ fpm383c指纹模块与德州仪器火箭板做的指纹锁
 sample:
 ![20230610000445](https://github.com/xinnie-the-pooh/FPM383c/assets/62879756/17ebbb4e-d383-442e-81e7-9a7c0fc85c20)
 wire connect:
+a4988 step-- lunchpad p2.0
 
 a4988 en-- lunchpad p2.4
 
