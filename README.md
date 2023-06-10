@@ -46,17 +46,17 @@ a4988 vi-- lunchpad 5v
 
 a4988 dir--a4988 vi
 
-hmc589(6)--lunchpad gnd
+FPM383c(6)--lunchpad gnd
 
-hmc589(5)--lunchpad p3.3
+FPM383c(5)--lunchpad p3.3
 
-hmc589(4)--lunchpad p3.4
+FPM383c(4)--lunchpad p3.4
 
-hmc589(3)--lunchpad 3.3v
+FPM383c(3)--lunchpad 3.3v
 
-hmc589(2)--lunchpad p6.5//i do not use this function 
+FPM383c(2)--lunchpad p6.5//i do not use this function 
 
-hmc589(1)--lunchpad 3.3v
+FPM383c(1)--lunchpad 3.3v
 
 My step motor :36c type 0.9 degree per step,and a4988 board jumper all high ,that's mean /16, so if i want let it run 90 degree, it's need (360/0.9)*(360/90)*16 high-low 
 
