@@ -4,10 +4,13 @@
 FPM383c on MSP430f5529lp
 
 
+2023.5.22 简单程序测试通过
+2023.6.10 添加了a4988的启停部分,锯了n个锁头
+
 project could opened by TI energia for msp430f5529 lunchpad
 
 
-i /* didn't */finish it's step motor controler! with a4988 // but it's enough.
+i finish it's step motor controler! with a4988 
 
 
 i have already test it,it works .
@@ -23,15 +26,9 @@ fpm383c指纹模块与德州仪器火箭板做的指纹锁
 
 未开锁时红蓝交替闪烁,开锁时变为绿色
 
-//红色灯闪烁模拟步进电机脉冲
-
-//测试通过2023.5.22
-
 
 可以正常使用..很快就要按到门上了 
 
-
-添加了a4988的启停部分 2023.6.10 
 
 sample:
 ![20230610000445](https://github.com/xinnie-the-pooh/FPM383c/assets/62879756/17ebbb4e-d383-442e-81e7-9a7c0fc85c20)
