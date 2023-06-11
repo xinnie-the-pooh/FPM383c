@@ -5,6 +5,7 @@ FPM383c on MSP430f5529lp
 
 
 2023.5.22 简单程序测试通过
+
 2023.6.10 添加了a4988的启停部分,锯了n个锁头
 
 project could opened by TI energia for msp430f5529 lunchpad
