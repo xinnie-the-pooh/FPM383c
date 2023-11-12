@@ -7,7 +7,7 @@ FPM383c on MSP430f5529lp
 2023.5.22 简单程序测试通过
 
 2023.6.10 添加了a4988的启停部分,锯了n个锁头
-
+2023.11.11用arduino nano重制
 project could opened by TI energia for msp430f5529 lunchpad
 
 
@@ -59,6 +59,9 @@ FPM383c(1)--lunchpad 3.3v
 My step motor :36c type 0.9 degree per step,and a4988 board jumper all high ,that's mean /16, so if i want let it run 90 degree, it's need (360/0.9)*(360/90)*16 high-low 
 
 Those buffer used in program has check sum .if need change color or others,calc them first!
+
+2023-11.11now,i rebuild this project 
+![c905bdbbc976d170e4ba83f52798ad2](https://github.com/xinnie-the-pooh/FPM383c/assets/62879756/e8173a1f-2e39-43bc-bf1f-5bfec1ed1bbb)
 
 
 
